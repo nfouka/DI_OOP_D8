@@ -1,0 +1,5 @@
+name: oop
+type: module
+description: programmation orienté objet tutorals
+core: 8.x
+package: DCISS
