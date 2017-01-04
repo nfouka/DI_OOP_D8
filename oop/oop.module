@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains oop.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function oop_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the oop module.
+    case 'help.page.oop':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('programmation orienté objet tutorals') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function oop_theme() {
+  return [
+    'oop' => [
+      'template' => 'oop',
+      'render element' => 'children',
+    ],
+  ];
+}
